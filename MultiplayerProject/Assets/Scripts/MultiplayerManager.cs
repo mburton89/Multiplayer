@@ -1,21 +1,12 @@
 using System.Diagnostics;
 using Unity.Netcode;
+using Unity.Netcode.Transports.UTP;
 using UnityEngine;
 using UnityEngine.UI;
-using Unity.Netcode.Transports.UTP;
-using TMPro;
 
-public class MultiplayerUI : MonoBehaviour
+public class MultiplayerManager : MonoBehaviour
 {
-    public Button startHostButton;
-    public Button startClientButton;
-    public TMP_InputField ipInputField;
-
-    private void Start()
-    {
-        startHostButton.onClick.AddListener(StartHost);
-        startClientButton.onClick.AddListener(StartClient);
-    }
+    public InputField ipInputField;
 
     public void StartHost()
     {
